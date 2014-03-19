@@ -1,10 +1,8 @@
-from ps4a import *
+from WGa import *
 import time
 
 
 #
-#
-# Problem #6: Computer chooses a word
 #
 #
 def compChooseWord(hand, wordList, n):
@@ -32,24 +30,12 @@ def compChooseWord(hand, wordList, n):
                 maxScore = tempScore
                 bestWord = Word
     return bestWord
-    # For each word in the wordList
 
-        # If you can construct the word from your hand
-        # (hint: you can use isValidWord, or - since you don't really need to test if the word is in the wordList - you can make a similar function that omits that test)
-
-            # Find out how much making that word is worth
-
-            # If the score for that word is higher than your best score
-
-                # Update your best score, and best word accordingly
-
-
-    # return the best word you found.
 wordList = loadWords()
 compChooseWord({'a': 1, 'p': 2, 's': 1, 'e': 1, 'l': 1}, wordList, 6)
 
 #
-# Problem #7: Computer plays a hand
+# 
 #
 def compPlayHand(hand, wordList, n):
     """
@@ -70,7 +56,6 @@ def compPlayHand(hand, wordList, n):
     wordList: list (string)
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     """
-    # TO DO ... <-- Remove this comment when you code this function
     totScore = 0
     handLen = calculateHandlen(hand)
     print "Current Hand: ", 
@@ -94,7 +79,6 @@ def compPlayHand(hand, wordList, n):
     print 'Total score: ' + str(totScore) + ' points.'
             
 #
-# Problem #8: Playing a game
 #
 #
 def playGame(wordList):
@@ -121,7 +105,6 @@ def playGame(wordList):
 
     wordList: list (string)
     """
-    # TO DO... <-- Remove this comment when you code this function
     HAND_SIZE = 7
     cnt = 0
     userInit = raw_input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
