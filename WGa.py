@@ -1,8 +1,5 @@
-# 6.00x Problem Set 4A Template
 #
-# The 6.00 Word Game
-# Created by: Kevin Luu <luuk> and Jenna Wiens <jwiens>
-# Modified by: Sarina Canelake <sarina>
+# Word Game
 #
 
 import random
@@ -16,9 +13,7 @@ SCRABBLE_LETTER_VALUES = {
     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
 }
 
-# -----------------------------------
-# Helper code
-# (you don't need to understand this helper code)
+
 
 WORDLIST_FILENAME = "words.txt"
 
@@ -53,13 +48,10 @@ def getFrequencyDict(sequence):
     for x in sequence:
         freq[x] = freq.get(x,0) + 1
     return freq
-	
 
-# (end of helper code)
-# -----------------------------------
 
 #
-# Problem #1: Scoring a word
+# 
 #
 def getWordScore(word, n):
     """
@@ -76,7 +68,7 @@ def getWordScore(word, n):
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     returns: int >= 0
     """
-    # TO DO ... <-- Remove this comment when you code this function
+
     if len(word) > n:
       error("word has to be smaller")
     else:
@@ -91,7 +83,7 @@ def getWordScore(word, n):
 
 
 #
-# Problem #2: Make sure you understand how this function works and what it does!
+# 
 #
 def displayHand(hand):
     """
@@ -111,7 +103,7 @@ def displayHand(hand):
     print                             
 
 #
-# Problem #2: Make sure you understand how this function works and what it does!
+# 
 #
 def dealHand(n):
     """
@@ -139,7 +131,7 @@ def dealHand(n):
     return hand
 
 #
-# Problem #2: Update a hand by removing letters
+# 
 #
 def updateHand(hand, word):
     """
@@ -165,7 +157,7 @@ def updateHand(hand, word):
 		
 		
 #
-# Problem #3: Test word validity
+# 
 #
 def isValidWord(word, hand, wordList):
     """
@@ -191,7 +183,7 @@ def isValidWord(word, hand, wordList):
 
 
 #
-# Problem #4: Playing a hand
+# 
 #
 
 def calculateHandlen(hand):
@@ -201,7 +193,6 @@ def calculateHandlen(hand):
     hand: dictionary (string-> int)
     returns: integer
     """
-    # TO DO... <-- Remove this comment when you code this function
     temp = 0
     for keys in hand:
         temp += hand[keys]
@@ -270,7 +261,7 @@ def playHand(hand, wordList, n):
 #displayHand({'h':1, 'i':1, 'c':1, 'z':1, 'm':2, 'a':1})
 
 #
-# Problem #5: Playing a game
+# 
 # 
 
 def playGame(wordList):
@@ -305,12 +296,8 @@ def playGame(wordList):
             print 'Invalid command.'
         print
         userInit = raw_input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
-        	   
+  	   
         	    
-	
-	
-   
-
 
 
 #
